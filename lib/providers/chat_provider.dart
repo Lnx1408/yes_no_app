@@ -6,8 +6,11 @@ class ChatProvider extends ChangeNotifier {
     Message(text: 'Main lieber', fromWho: FromWho.me),
     Message(text: 'Estás en casa?', fromWho: FromWho.me),
   ];
-}
 
-Future<void> sendMessage(String text) async {
-  //Metodo
+  Future<void> sendMessage(String text) async {
+    final newMessage = Message(text: text, fromWho: FromWho.me);
+    messageList.add(newMessage);
+    //Permite notificar al provider el cambio
+    notifyListeners();
+  }
 }
