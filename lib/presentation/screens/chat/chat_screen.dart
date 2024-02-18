@@ -20,7 +20,7 @@ class ChatScreen extends StatelessWidget {
                 'https://pbs.twimg.com/profile_images/1005776803070337026/oZs9_RPw_400x400.jpg'),
           ),
         ),
-        title: const Text("Liebste 🤍"),
+        title: const Text("Liebste"),
         centerTitle: false,
       ),
       body: _ChatView(),
